@@ -1,0 +1,134 @@
+@import "../variables";
+
+.hero {
+  margin: 100px 0 50px;
+  padding: $padding;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 2rem;
+
+    .heroTitle {
+      flex: 1 1 40%;
+      padding-right: 2rem;
+
+      h1 {
+        font-size: 55px;
+        font-weight: bold;
+        color: $title-color;
+      }
+
+      p {
+        font-size: 16px;
+        color: $paragraph-color;
+        line-height: 32px;
+        margin: 20px 0 30px 0;
+      }
+
+      button {
+        padding: 15px 30px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;
+        background-color: $primary-color;
+        cursor: pointer;
+      }
+    }
+
+    .heroImg {
+      flex: 1 1 60%;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+// Media Queries
+// Laptop
+@media (max-width: 1366px) {
+  .hero {
+    .row {
+      .heroTitle {
+        h1 {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 12px 25px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  .hero {
+    .row {
+      .heroTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 40px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        button {
+          font-size: 16px;
+        }
+      }
+
+      .heroImg {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  .hero {
+    .row {
+      .heroTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 30px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 14px;
+          text-align: center;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 12px 25px;
+        }
+      }
+    }
+  }
+}

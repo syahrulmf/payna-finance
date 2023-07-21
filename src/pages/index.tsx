@@ -1,6 +1,10 @@
-import styles from "@/styles/Home.module.scss";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Partner from "@/components/Partner";
+import styles from "@/styles/Home.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +18,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>Payna Finance</h1>
+        <Navbar />
+        <Hero />
+        <Partner />
       </main>
     </>
   );

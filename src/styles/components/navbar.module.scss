@@ -1,0 +1,123 @@
+@import "../variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+
+  .navbarNav {
+    .navLink {
+      color: $title-color;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 2rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid $primary-color;
+        transform: scaleX(0);
+        transition: 0.2s linear;
+      }
+
+      &:hover::after {
+        transform: scaleX(0.6);
+      }
+    }
+  }
+
+  .navbarExtra {
+    display: flex;
+    align-items: center;
+
+    .loginButton {
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      background-color: $secondary-color;
+      color: $title-color;
+      transition: 0.2s linear;
+      margin-right: 1rem;
+
+      &:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+
+  #hamburgerMenu {
+    display: none;
+  }
+}
+
+// Laptop
+@media (max-width: 1366px) {
+  .navbarNav {
+    .navLink {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  #hamburgerMenu {
+    display: inline-block !important;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $title-color;
+
+      &:hover {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  .navbarNav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+    background-color: rgba($color: $secondary-color, $alpha: 0.9) !important;
+    border-right: 1px solid $secondary-color;
+
+    .navLink {
+      display: block !important;
+      margin: 1.5rem !important;
+      padding: 0.5rem !important;
+      font-size: 1.5rem !important;
+
+      &::after {
+        transform-origin: 0 0;
+      }
+
+      &:hover::after {
+        transform: scaleX(0.2) !important;
+      }
+    }
+
+    &.active {
+      right: 0;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+}
