@@ -1,0 +1,133 @@
+@import "../variables";
+
+.offer {
+  padding: 6rem 7%;
+
+  .row {
+    padding: 0 2rem;
+
+    .offerTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .titleTag {
+        color: #f75c4e;
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        color: $title-color;
+      }
+
+      .titleDesc {
+        margin: 20px 0 70px 0;
+        font-size: 1rem;
+        line-height: 32px;
+        color: $paragraph-color;
+        max-width: 386px;
+        text-align: center;
+      }
+    }
+
+    .offerItems {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: 90px;
+
+      .item {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 60px;
+
+        .itemIcon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: flex-start;
+          padding: 18px;
+          border-radius: 50%;
+        }
+
+        .itemText {
+          h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: $title-color;
+          }
+
+          p {
+            font-size: 1rem;
+            color: $paragraph-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media (max-width: 1366px) {
+  .offer {
+    .row {
+      .offerItems {
+        column-gap: 0;
+
+        .item {
+          width: 275px;
+          gap: 18px;
+
+          .itemIcon {
+            padding: 15px;
+          }
+
+          .itemText {
+            h4 {
+              font-size: 1.2rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 758px) {
+  .offer {
+    .row {
+      .offerItems {
+        .item {
+          width: 100%;
+          gap: 24px;
+
+          .itemIcon {
+            padding: 18px;
+          }
+
+          .itemText {
+            h4 {
+              font-size: 1.4rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

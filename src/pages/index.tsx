@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Offer from "@/components/Offer";
 import Partner from "@/components/Partner";
 import styles from "@/styles/Home.module.scss";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Partner />
+        <Offer />
       </main>
     </>
   );
