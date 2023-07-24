@@ -1,0 +1,94 @@
+@import "../variables";
+
+.contact {
+  padding: $padding;
+
+  .row {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+
+    .contactImg {
+      position: relative;
+      flex: 1 1 50%;
+
+      .img {
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .imgPlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+    }
+
+    .contactText {
+      flex: 1 1 50%;
+      .textTag {
+        color: #f75c4e;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .textTitle {
+        color: $title-color;
+        font-size: 36px;
+        font-weight: 700;
+        padding: 6px 0 20px;
+      }
+
+      .textDesc {
+        color: $paragraph-color;
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      .contactForm {
+        margin-top: 40px;
+        position: relative;
+
+        input {
+          padding: 15px;
+          background-color: $secondary-color;
+          border-radius: 50px;
+          width: 100%;
+          font-size: 16px;
+        }
+
+        button {
+          position: absolute;
+          right: 0;
+          padding: 15px 25px;
+          color: #fff;
+          background-color: $primary-color;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 758px) {
+  .contact {
+    .row {
+      flex-direction: column;
+      gap: 10px;
+
+      .contactText {
+        text-align: center;
+      }
+    }
+  }
+}

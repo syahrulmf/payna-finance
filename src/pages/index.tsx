@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Offer from "@/components/Offer";
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <Partner />
         <Offer />
+        <Contact />
       </main>
     </>
   );
